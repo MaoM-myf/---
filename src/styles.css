@@ -789,10 +789,10 @@ video {
 .fullDetailDivider {
   display: grid;
   grid-template-columns: minmax(360px, 0.9fr) minmax(420px, 1.25fr);
-  gap: 44px;
+  gap: 32px;
   align-items: end;
-  min-height: 260px;
-  padding: 38px;
+  min-height: 180px;
+  padding: 28px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background:
@@ -808,7 +808,7 @@ video {
 
 .fullDetailDivider h3 {
   margin: 0;
-  font-size: 54px;
+  font-size: 42px;
   font-weight: 620;
   line-height: 1.04;
 }
@@ -816,8 +816,8 @@ video {
 .fullDetailDivider p {
   margin: 0;
   color: #aeb7ba;
-  font-size: 17px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .fullDetailDivider ul {
@@ -825,7 +825,7 @@ video {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 12px 0 0;
+  margin: 4px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -874,7 +874,6 @@ video {
 .fullDetailImage {
   display: block;
   width: 100%;
-  height: clamp(680px, 58vw, 920px);
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
@@ -886,9 +885,8 @@ video {
 
 .fullDetailImage img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  object-fit: contain;
 }
 
 .lightbox {
