@@ -36,7 +36,6 @@ const metrics = [
   { value: '10年', label: '电商与品牌视觉经验' },
   { value: 'TOP 1', label: '灭蚊拍视觉助力天猫类目第一' },
   { value: 'TOP 10', label: '多款夏季小家电进入类目前十' },
-  { value: '5w+', label: '店铺日销从 1w+ 提升至 5w+' },
 ];
 
 const timeline = [
