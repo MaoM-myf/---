@@ -226,7 +226,12 @@ function App() {
               <span>VISUAL / AI / BRAND DESIGNER</span>
             </div>
             <div className="portraitImageFrame">
-              <img src="/assets/profile-photo.jpg" alt="毛亚锋个人照片" />
+              <img
+                src="/assets/profile-photo.jpg"
+                alt="毛亚锋个人照片"
+                loading="eager"
+                fetchPriority="high"
+              />
             </div>
             <div className="portraitCaption">
               <Sparkles size={18} />
@@ -287,7 +292,7 @@ function App() {
       </section>
 
       <section id="experience" className="hero">
-        <video className="heroVideo" autoPlay muted loop playsInline poster="/assets/hero-poster.png">
+        <video className="heroVideo" autoPlay muted loop playsInline preload="none" poster="/assets/hero-poster.png">
           <source
             src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4"
             type="video/mp4"
@@ -342,10 +347,10 @@ function App() {
         </div>
         <div className="workScroller autoScroll" aria-label="自动滚动作品展示">
           <div className="workTrack">
-          {[...featuredWorks, ...featuredWorks].map((work, index) => (
-            <article className="workSlide" key={`${work.product}-${work.src}-${index}`}>
+          {featuredWorks.map((work) => (
+            <article className="workSlide" key={`${work.product}-${work.src}`}>
               <div className="workImageWrap">
-                <img src={work.src} alt={work.name} />
+                <img src={work.src} alt={work.name} loading="lazy" decoding="async" />
               </div>
               <div>
                 <p>{work.category}</p>
@@ -366,7 +371,7 @@ function App() {
               <div className="groupImages">
                 {group.items.map((item) => (
                   <figure key={item.src}>
-                    <img src={item.src} alt={item.name} />
+                    <img src={item.src} alt={item.name} loading="lazy" decoding="async" />
                   </figure>
                 ))}
               </div>
@@ -393,7 +398,7 @@ function App() {
           <div className="narrativeGrid">
             {creativeNarratives.map((item) => (
               <article className="narrativeCard" key={item.title}>
-                <img src={item.image} alt={item.title} />
+                <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
                 <div>
                   <span>{item.kicker}</span>
                   <h3>{item.title}</h3>
@@ -424,7 +429,7 @@ function App() {
                         onClick={() => setActiveDetail(item)}
                         aria-label={`查看${item.name}完整大图`}
                       >
-                        <img src={item.src} alt={item.name} />
+                        <img src={item.src} alt={item.name} loading="lazy" decoding="async" />
                       </button>
                       <button
                         className="fullDetailAction"
@@ -499,7 +504,7 @@ function App() {
             <X size={22} />
           </button>
           <div className="lightboxPanel" onClick={(event) => event.stopPropagation()}>
-            <img src={activeDetail.src} alt={activeDetail.name} />
+            <img src={activeDetail.src} alt={activeDetail.name} loading="eager" />
           </div>
           <div className="lightboxCaption">
             <span>{activeDetail.product}</span>
