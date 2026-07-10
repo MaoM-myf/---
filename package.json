@@ -1,0 +1,30 @@
+{
+  "name": "ai-1-hero-2-3-4",
+  "version": "1.0.0",
+  "description": "Personal portfolio for visual, AI and brand designer Mao Yafeng.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "\"C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1",
+    "build": "\"C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" node_modules/vite/bin/vite.js build",
+    "preview": "\"C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe\" node_modules/vite/bin/vite.js preview --host 127.0.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.7.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest"
+  },
+  "devDependencies": {}
+}
