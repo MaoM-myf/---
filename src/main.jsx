@@ -352,7 +352,7 @@ function App() {
           {featuredWorks.map((work) => (
             <article className="workSlide" key={`${work.product}-${work.src}`}>
               <div className="workImageWrap">
-                <img src={assetPath(work.src)} alt={work.name} loading="lazy" decoding="async" />
+                <img src={assetPath(work.src)} alt={work.name} loading="eager" decoding="async" />
               </div>
               <div>
                 <p>{work.category}</p>
@@ -373,7 +373,7 @@ function App() {
               <div className="groupImages">
                 {group.items.map((item) => (
                   <figure key={item.src}>
-                    <img src={assetPath(item.src)} alt={item.name} loading="lazy" decoding="async" />
+                    <img src={assetPath(item.src)} alt={item.name} loading="eager" decoding="async" />
                   </figure>
                 ))}
               </div>
